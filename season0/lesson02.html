@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Day 2 — Prompt Loop 101 + Worked Example</title>
+<title>Day 2 — Prompt Loop 101 + Your First Win</title>
 <link rel="stylesheet" href="../assets/course.css">
 </head>
 <body data-lesson-id="s0d2">
 <header>
-  <h1>Day 2 — Prompt Loop 101 + Worked Example</h1>
-  <div class="lesson-meta">Goal: learn the loop (Goal → Context → Constraints → Draft → Critique → Revise) and produce a warmup to test. <span id="statusBadge" class="badge">Status</span></div>
+  <h1>Day 2 — Prompt Loop 101 + Your First Win</h1>
+  <div class="lesson-meta">
+    Goal: Learn the loop (Goal → Context → Constraints → Draft → Critique → Revise). Build a 20‑min keeper warmup to test later.
+    <span id="statusBadge" class="badge">Status</span>
+  </div>
   <nav class="main">
     <a href="index.html">Season 0</a>
     <a href="../index.html">Game</a>
@@ -16,51 +19,62 @@
 </header>
 
 <section class="card">
-  <h3>The Loop</h3>
+  <h3>Teacher talk (2 min): Why the loop?</h3>
+  <p>Great prompts aren’t magic— they’re a small routine. You tell AI what you want, your situation, and limits. It drafts. You critique it (like a coach), then it revises. Repeat until it’s useful.</p>
   <ol>
-    <li><b>Goal</b> — what result you want</li>
-    <li><b>Context</b> — who/where/limits</li>
-    <li><b>Constraints</b> — time, tools, length</li>
-    <li><b>Draft</b> — first attempt</li>
-    <li><b>Critique</b> — 3 fixes + 1 risk</li>
-    <li><b>Revise</b> — improve it</li>
+    <li><b>Goal</b> — “Make a keeper warmup.”</li>
+    <li><b>Context</b> — “I’m 11, driveway or field, cones optional.”</li>
+    <li><b>Constraints</b> — “20 minutes, safe, 3 blocks.”</li>
+    <li><b>Draft</b> — first plan.</li>
+    <li><b>Critique</b> — “Missing high catches; add cues.”</li>
+    <li><b>Revise</b> — improved plan.</li>
   </ol>
 </section>
 
 <section class="card">
-  <h3>Run it (keeper warmup v1)</h3>
+  <h3>Guided example (copy this into ChatGPT)</h3>
   <div class="copywrap">
-    <button class="copybtn" data-target="p2">Copy</button>
-    <textarea id="p2" class="prompt" readonly>You are my “Prompt Coach.” Run this loop with me:
+    <button class="copybtn btn" data-target="p2">Copy</button>
+    <textarea id="p2" class="prompt" readonly>You are my “Prompt Coach.” Run the loop with me:
 1) Ask 2 clarifying questions (field or driveway? cones available?)
-2) Propose a 20‑minute keeper warmup (3 blocks) with minutes + cues
+2) Propose a 20‑minute keeper warmup (3 blocks) with minutes + 2 cues each
 3) Critique your own plan (3 improvements + 1 risk)
 4) Revise the plan
 Constraints: age 11, minimal gear, safe on driveway or grass.</textarea>
   </div>
-  <p class="tiny">Save the revised plan to test on Day 6. Record 2 cues you want to remember.</p>
+</section>
+
+<section class="card">
+  <h3>Practice (5–8 min): Capture your final plan</h3>
+  <p>Paste the revised warmup into your tracker. Pick <b>two</b> cues you’ll focus on (e.g., “W hands,” “eyes through ball”).</p>
 </section>
 
 <section class="quiz card" data-lesson="s0d2">
-  <h4>Quick check</h4>
+  <h4>Check my understanding</h4>
   <div class="q" data-answer="b">
-    <div>1) Where should “constraints” appear?</div>
-    <label><input type="radio" name="q1" value="a"> only at the end</label><br>
-    <label><input type="radio" name="q1" value="b"> before drafting, to shape the draft</label><br>
-    <label><input type="radio" name="q1" value="c"> never, constraints slow you down</label>
-  </div>
-  <div class="q" data-answer="a">
-    <div>2) Best critique comment?</div>
-    <label><input type="radio" name="q2" value="a"> “Handling block lacks high balls—add 3×8 high catches.”</label><br>
-    <label><input type="radio" name="q2" value="b"> “Looks fine.”</label>
+    <div>1) When do you set constraints?</div>
+    <label><input type="radio" name="q1" value="a"> After the draft</label><br>
+    <label><input type="radio" name="q1" value="b"> Before drafting, so the draft fits</label><br>
+    <label><input type="radio" name="q1" value="c"> Never</label>
   </div>
   <div class="q" data-answer="revise">
-    <div>3) After critiques, what’s next? (type one word)</div>
-    <input type="text" placeholder="your answer">
+    <div>2) After you list 3 improvements and 1 risk, the next step is to ______.</div>
+    <input type="text" placeholder="one word">
+  </div>
+  <div class="q" data-answer="a">
+    <div>3) Which critique is best?</div>
+    <label><input type="radio" name="q3" value="a"> “Handling block lacks high balls—add 3×8 high catches.”</label><br>
+    <label><input type="radio" name="q3" value="b"> “Looks fine.”</label>
   </div>
 </section>
 
 <section class="card">
+  <h3>Notes</h3>
+  <textarea id="notes" class="notes" placeholder="Which cues did I pick? What will I test on Day 6?"></textarea>
+</section>
+
+<section class="card">
+  <a class="btn" href="lesson03.html">Next → Day 3</a>
   <button id="completeBtn" class="btn primary" onclick="markComplete('s0d2')">Mark lesson complete</button>
 </section>
 
