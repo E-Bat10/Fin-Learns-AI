@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fin’s AI Quest — Guides</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root { --max: 960px; }
+  body { max-width: var(--max); margin: 20px auto; line-height: 1.55; }
+  nav[aria-label="primary"] { display:flex; gap:10px; margin:10px 0 20px; flex-wrap: wrap; }
+  nav a { text-decoration:none; padding:6px 10px; border:1px solid #bbb; border-radius:6px; }
+  .pill { display:inline-block; font-size:.9rem; opacity:.8; margin-left:6px; }
+  details { border:1px solid #ddd; border-radius:8px; padding:10px 12px; margin:10px 0; }
+  details[open] { background:#fafafa; }
+  summary { font-weight:600; cursor:pointer; }
+  .grid { display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+  .check { display:flex; gap:8px; align-items:flex-start; margin:6px 0; }
+  .copywrap { position:relative; }
+  .copybtn { position:absolute; right:6px; top:6px; padding:4px 8px; font-size:.85rem; }
+  textarea.prompt { width:100%; min-height:120px; padding:10px; border:1px solid #aaa; border-radius:8px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .note { font-size:.92rem; opacity:.85; }
+  .ok { color:green; font-weight:600; }
+  .warn { color:#c77; font-weight:600; }
+  .todo { margin:8px 0; }
+  .tiny { font-size:.85rem; opacity:.7; }
+  .badge { padding:2px 6px; border:1px solid #bbb; border-radius:999px; font-size:.8rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Fin’s AI Quest — Guides</h1>
+  <p class="tiny">Day-by-day / week-by-week instructions, prompts, and toolkits. Checkboxes save on this device only.</p>
+</header>
+
+<nav aria-label="primary">
+  <a href="index.html">Game</a>
+  <a href="#season0">Season 0</a>
+  <a href="#season1">Season 1</a>
+  <a href="#prompts">Prompt Library</a>
+  <a href="#toolkits">Toolkits</a>
+</nav>
+
+<section id="season0">
+  <h2>Season 0 (14 days): Setup, Safety, Coachability <span class="pill">20–30 min/day</span></h2>
+  <p class="note">Goal: learn the prompt loop, set family rules, catch AI mistakes, and build momentum.</p>
+
+  <!-- Season 0 details -->
+  <!-- ... full day-by-day content from our plan ... -->
+</section>
+
+<section id="season1">
+  <h2>Season 1 (6–8 weeks): Core Skills + Real Interests</h2>
+  <p class="note">Each week = 3 short sessions (20–30 min) + 1 weekend block.</p>
+
+  <!-- Season 1 details -->
+  <!-- ... week-by-week content from our plan ... -->
+</section>
+
+<section id="prompts">
+  <h2>Prompt Library (copy & go)</h2>
+  <!-- Prompt library details -->
+</section>
+
+<section id="toolkits">
+  <h2>Toolkits</h2>
+  <!-- Toolkits content -->
+</section>
+
+<footer>
+  <p class="tiny">© <span id="yr"></span> Fin’s AI Quest — This page saves your checkboxes in your browser (local only).</p>
+</footer>
+
+<script>
+  const KEY = "fin_ai_guides_v1";
+  const state = JSON.parse(localStorage.getItem(KEY) || "{}");
+  document.querySelectorAll('input[type="checkbox"][data-id]').forEach(cb => {
+    const id = cb.getAttribute("data-id");
+    cb.checked = !!state[id];
+    cb.addEventListener("change", () => { state[id] = cb.checked; localStorage.setItem(KEY, JSON.stringify(state)); });
+  });
+
+  document.querySelectorAll(".copybtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = document.getElementById(btn.dataset.target);
+      navigator.clipboard.writeText(target.value || target.textContent).then(()=> {
+        btn.textContent = "Copied!";
+        setTimeout(()=> btn.textContent = "Copy prompt", 1200);
+      });
+    });
+  });
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
