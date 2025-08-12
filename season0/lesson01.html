@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 1 — Family AI Code + PIN</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body data-lesson-id="s0d1">
+<header>
+  <h1>Day 1 — Family AI Code + PIN</h1>
+  <div class="lesson-meta">Goal: set ground rules, learn what AI is/ isn’t, agree on citations & privacy. <span id="statusBadge" class="badge">Status</span></div>
+  <nav class="main">
+    <a href="index.html">Season 0</a>
+    <a href="../index.html">Game</a>
+  </nav>
+</header>
+
+<section class="card">
+  <h3>Mini‑lesson: What AI can & can’t do</h3>
+  <ul>
+    <li><b>Can:</b> explain clearly, outline plans, brainstorm ideas, translate, draft, check steps, generate drills.</li>
+    <li><b>Can’t (reliably):</b> know private facts, guarantee truth, follow school rules for you, read your mind.</li>
+    <li><b>Hallucination:</b> when AI sounds confident but is wrong → that’s why we verify important things.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h3>Write your Family AI Code (with ChatGPT’s help)</h3>
+  <div class="copywrap">
+    <button class="copybtn" data-target="p1">Copy</button>
+    <textarea id="p1" class="prompt" readonly>Act as a neutral facilitator. Draft a one‑page “Family AI Code” with:
+• Allowed vs Not Allowed (kid‑friendly)
+• How we cite AI help at school (3 options)
+• Privacy reminders (what not to paste)
+• Safety rule: if it matters, verify with 2–3 sources
+Return bullet points we can print and sign.</textarea>
+  </div>
+  <p class="tiny">Parents: write the real Parent PIN on paper (not stored in files).</p>
+</section>
+
+<section class="quiz card" data-lesson="s0d1">
+  <h4>Quick check</h4>
+  <div class="q" data-answer="b">
+    <div>1) Which is <b>not</b> a reliable use of AI for school?</div>
+    <label><input type="radio" name="q1" value="a"> brainstorming structure</label><br>
+    <label><input type="radio" name="q1" value="b"> copying final answers to submit</label><br>
+    <label><input type="radio" name="q1" value="c"> translating and then editing yourself</label>
+  </div>
+  <div class="q" data-answer="a">
+    <div>2) A good safety step before using AI output for something important is to…</div>
+    <label><input type="radio" name="q2" value="a"> verify with 2–3 trustworthy sources</label><br>
+    <label><input type="radio" name="q2" value="b"> assume it’s correct if it sounds confident</label>
+  </div>
+  <div class="q" data-answer="c">
+    <div>3) Which citation note is acceptable?</div>
+    <label><input type="radio" name="q3" value="a"> No citation needed if I changed a word</label><br>
+    <label><input type="radio" name="q3" value="b"> “ChatGPT wrote this for me entirely”</label><br>
+    <label><input type="radio" name="q3" value="c"> “Outline drafted with ChatGPT on Aug 20.”</label>
+  </div>
+</section>
+
+<section class="card">
+  <button id="completeBtn" class="btn primary" onclick="markComplete('s0d1')">Mark lesson complete</button>
+</section>
+
+<footer class="tiny">© <span id="yr"></span> Fin’s AI Quest</footer>
+<script src="../assets/course.js"></script>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
