@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Day 3 — Hallucination Hunter</title>
+<title>Day 3 — Spot the Mistakes (Fact‑checking & Bias)</title>
 <link rel="stylesheet" href="../assets/course.css">
 </head>
 <body data-lesson-id="s0d3">
 <header>
-  <h1>Day 3 — Hallucination Hunter</h1>
-  <div class="lesson-meta">Goal: learn to verify claims, pick good sources, and write a 6‑sentence conclusion. <span id="statusBadge" class="badge">Status</span></div>
+  <h1>Day 3 — Spot the Mistakes (Fact‑checking & Bias)</h1>
+  <div class="lesson-meta">
+    Goal: Learn to verify claims, choose reliable sources, and avoid confirmation bias. Produce one 5–6 sentence fact‑checked answer.
+    <span id="statusBadge" class="badge">Status</span>
+  </div>
   <nav class="main">
     <a href="index.html">Season 0</a>
     <a href="../index.html">Game</a>
@@ -16,53 +19,65 @@
 </header>
 
 <section class="card">
-  <h3>Mini‑lesson: How to verify</h3>
+  <h3>Teacher talk (2–3 min): Why AI can be confidently wrong</h3>
+  <p>GPT predicts words from patterns— it doesn’t browse the web on its own. If training data had errors or your question is vague, it can sound sure but be wrong. That’s why we <b>verify</b> important stuff.</p>
   <ul>
-    <li>Prefer <b>.gov</b>, <b>.edu</b>, reputable <b>.org</b>, textbooks, or peer‑reviewed sources.</li>
-    <li>Check <b>dates</b>. Out‑of‑date info can mislead.</li>
-    <li><b>Triangulate</b> 2–3 independent sources; avoid confirmation bias.</li>
-  </ul>
-  <p>Claims to test today:</p>
-  <ul>
-    <li>“Lightning never strikes the same place twice.” — <i>False</i>, it can strike repeatedly.</li>
-    <li>“North Carolina’s capital is Charlotte.” — <i>False</i> (it’s Raleigh).</li>
-    <li>“Ray tracing increases FPS.” — <i>Usually false</i>; it’s heavier on the GPU.</li>
-    <li>“Sea turtles are reptiles.” — <i>True</i>.</li>
+    <li><b>Good sources:</b> official sites (.gov, .edu), reputable orgs (.org), textbooks, recent articles from trusted outlets.</li>
+    <li><b>Check dates:</b> old info can mislead.</li>
+    <li><b>Triangulate:</b> find 2–3 independent sources agreeing.</li>
+    <li><b>Bias guard:</b> ask “What would change my mind?”</li>
   </ul>
 </section>
 
 <section class="card">
-  <h3>Plan your check (use with ChatGPT)</h3>
+  <h3>Guided demo (copy into ChatGPT)</h3>
   <div class="copywrap">
-    <button class="copybtn" data-target="p3">Copy</button>
-    <textarea id="p3" class="prompt" readonly>Make a fact‑check plan for these claims. For each:
-• What to verify (key facts)
-• Which trustworthy sources to use
-• How to avoid confirmation bias
-Then produce a 6‑sentence conclusion template with [1][2][3] citation slots.</textarea>
+    <button class="copybtn btn" data-target="p3">Copy</button>
+    <textarea id="p3" class="prompt" readonly>Help me fact‑check one claim. Steps:
+1) Ask clarifying questions.
+2) Suggest 3 trustworthy sources to check (official or reputable).
+3) Explain how to avoid confirmation bias.
+4) Draft a 5–6 sentence conclusion with placeholders [1][2][3] for citations.</textarea>
   </div>
-  <p class="tiny">Write one 6‑sentence conclusion and paste the links you actually checked.</p>
+  <p>Pick one: “Lightning never strikes the same place twice.” / “NC’s capital is Charlotte.” / “Ray tracing increases FPS.” / “Sea turtles are reptiles.”</p>
+</section>
+
+<section class="card">
+  <h3>Practice (6–8 min): Write your conclusion</h3>
+  <p>Open two real sources, read them, and fill the [1][2][3] with the URLs and quick notes.</p>
 </section>
 
 <section class="quiz card" data-lesson="s0d3">
-  <h4>Quick check</h4>
+  <h4>Check my understanding</h4>
   <div class="q" data-answer="b">
-    <div>1) Which is the most trustworthy for a state capital?</div>
-    <label><input type="radio" name="q1" value="a"> A random blog from 2013</label><br>
-    <label><input type="radio" name="q1" value="b"> NC Secretary of State or official state site</label><br>
+    <div>1) For a state capital, which source is best?</div>
+    <label><input type="radio" name="q1" value="a"> A 2013 personal blog</label><br>
+    <label><input type="radio" name="q1" value="b"> Official state government site</label><br>
     <label><input type="radio" name="q1" value="c"> A forum comment</label>
   </div>
   <div class="q" data-answer="false">
     <div>2) “If a claim is popular, it’s true.” (type true/false)</div>
     <input type="text" placeholder="true or false">
   </div>
-  <div class="q" data-answer="dates">
+  <div class="q" data-answer="date|dates|publication date">
     <div>3) One key thing to check on an article before trusting it is the ______.</div>
     <input type="text" placeholder="your answer">
   </div>
 </section>
 
 <section class="card">
+  <h3>Notes</h3>
+  <textarea id="notes" class="notes" placeholder="Which sources did I trust and why? What would change my mind?"></textarea>
+</section>
+
+<section class="card">
+  <div id="gate" class="kidcallout">
+    <p><b>Milestone gate:</b> Show a parent your fact‑checked answer. When they’re satisfied, ask them to unlock the next module.</p>
+    <button class="btn danger" onclick="parentUnlock('bnldmB69!','nextLink')">Parent unlock</button>
+  </div>
+  <div id="nextLink" class="hidden">
+    <a class="btn" href="index.html">Unlocked ✔ — Back to Season 0 TOC</a>
+  </div>
   <button id="completeBtn" class="btn primary" onclick="markComplete('s0d3')">Mark lesson complete</button>
 </section>
 
