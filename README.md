@@ -1,5 +1,8 @@
 # Fin-Learns-AI
 Continuing Education for Fin to Master AI
+
+To Begin Course: https://e-bat10.github.io/Fin-Learns-AI/season0/index.html
+
 # Fin's AI Quest — GitHub Pages bundle
 Static site for GitHub Pages. Steps:
 1) Create a repo (e.g., `fin-ai-quest`) and upload these files to the **root**.
