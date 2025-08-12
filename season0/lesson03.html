@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 3 — Hallucination Hunter</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body data-lesson-id="s0d3">
+<header>
+  <h1>Day 3 — Hallucination Hunter</h1>
+  <div class="lesson-meta">Goal: learn to verify claims, pick good sources, and write a 6‑sentence conclusion. <span id="statusBadge" class="badge">Status</span></div>
+  <nav class="main">
+    <a href="index.html">Season 0</a>
+    <a href="../index.html">Game</a>
+  </nav>
+</header>
+
+<section class="card">
+  <h3>Mini‑lesson: How to verify</h3>
+  <ul>
+    <li>Prefer <b>.gov</b>, <b>.edu</b>, reputable <b>.org</b>, textbooks, or peer‑reviewed sources.</li>
+    <li>Check <b>dates</b>. Out‑of‑date info can mislead.</li>
+    <li><b>Triangulate</b> 2–3 independent sources; avoid confirmation bias.</li>
+  </ul>
+  <p>Claims to test today:</p>
+  <ul>
+    <li>“Lightning never strikes the same place twice.” — <i>False</i>, it can strike repeatedly.</li>
+    <li>“North Carolina’s capital is Charlotte.” — <i>False</i> (it’s Raleigh).</li>
+    <li>“Ray tracing increases FPS.” — <i>Usually false</i>; it’s heavier on the GPU.</li>
+    <li>“Sea turtles are reptiles.” — <i>True</i>.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h3>Plan your check (use with ChatGPT)</h3>
+  <div class="copywrap">
+    <button class="copybtn" data-target="p3">Copy</button>
+    <textarea id="p3" class="prompt" readonly>Make a fact‑check plan for these claims. For each:
+• What to verify (key facts)
+• Which trustworthy sources to use
+• How to avoid confirmation bias
+Then produce a 6‑sentence conclusion template with [1][2][3] citation slots.</textarea>
+  </div>
+  <p class="tiny">Write one 6‑sentence conclusion and paste the links you actually checked.</p>
+</section>
+
+<section class="quiz card" data-lesson="s0d3">
+  <h4>Quick check</h4>
+  <div class="q" data-answer="b">
+    <div>1) Which is the most trustworthy for a state capital?</div>
+    <label><input type="radio" name="q1" value="a"> A random blog from 2013</label><br>
+    <label><input type="radio" name="q1" value="b"> NC Secretary of State or official state site</label><br>
+    <label><input type="radio" name="q1" value="c"> A forum comment</label>
+  </div>
+  <div class="q" data-answer="false">
+    <div>2) “If a claim is popular, it’s true.” (type true/false)</div>
+    <input type="text" placeholder="true or false">
+  </div>
+  <div class="q" data-answer="dates">
+    <div>3) One key thing to check on an article before trusting it is the ______.</div>
+    <input type="text" placeholder="your answer">
+  </div>
+</section>
+
+<section class="card">
+  <button id="completeBtn" class="btn primary" onclick="markComplete('s0d3')">Mark lesson complete</button>
+</section>
+
+<footer class="tiny">© <span id="yr"></span> Fin’s AI Quest</footer>
+<script src="../assets/course.js"></script>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
