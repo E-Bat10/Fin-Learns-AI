@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fin's AI Quest — Seasons 0–1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Fin's AI Quest</h1>
+      <p>Progress is stored locally in your browser. Use with the PDF + Excel tracker.</p>
+    </header>
+
+    <section id="setup">
+      <h2>Setup</h2>
+      <label>Player Name <input id="playerName" placeholder="Fin Batten"></label>
+      <label>Parent PIN (set by parent) <input id="parentPin" type="password" placeholder="Set/Update PIN"></label>
+      <button id="saveSetup">Save</button>
+      <p class="small">Keep the real PIN on paper; this in‑app PIN only gates the boss buttons.</p>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="stats">
+        <div>XP: <span id="xp">0</span></div>
+        <div>Level: <span id="level">1</span></div>
+      </div>
+      <div class="actions">
+        <button id="btnSeason0">Season 0</button>
+        <button id="btnSeason1">Season 1</button>
+        <button id="btnMinigames">Mini‑Games</button>
+        <button id="btnReset" class="danger">Reset Progress</button>
+      </div>
+    </section>
+
+    <section id="season0" class="hidden">
+      <h2>Season 0 — Setup, Safety & Coachability</h2>
+      <p>Pick any 4 quests. Each quest gives 25 XP. Boss fight gives 60 XP.</p>
+      <ul id="s0quests"></ul>
+      <div class="boss">
+        <h3>Boss Fight</h3>
+        <p>Teach the prompt loop + No Yes‑Man to a parent and do a tiny live demo.</p>
+        <button data-boss="s0" class="bossComplete">Mark Boss Fight Complete (Parent PIN)</button>
+      </div>
+      <button class="back">Back</button>
+    </section>
+
+    <section id="season1" class="hidden">
+      <h2>Season 1 — Core Skills, Real Interests</h2>
+      <h3>Main Quests</h3>
+      <ul id="s1main"></ul>
+      <h3>Side Quests (choose two)</h3>
+      <ul id="s1side"></ul>
+      <h3>Off‑Screen Weekly Anchors</h3>
+      <ul id="s1anchors"></ul>
+      <div class="boss">
+        <h3>Boss Fight</h3>
+        <p>5‑minute recycling business pitch to parents.</p>
+        <button data-boss="s1" class="bossComplete">Mark Boss Fight Complete (Parent PIN)</button>
+      </div>
+      <button class="back">Back</button>
+    </section>
+
+    <section id="minigames" class="hidden">
+      <h2>Mini‑Games</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Prompt Loop Builder</h3>
+          <p>Drag steps into the correct order.</p>
+          <div id="plb"></div>
+          <button id="plbCheck">Check Order</button>
+          <div id="plbResult"></div>
+        </div>
+        <div class="card">
+          <h3>Hallucination Hunter Quiz</h3>
+          <p>Mark each statement True/False. Score 6/6 for bonus XP.</p>
+          <div id="hhq"></div>
+          <button id="hhqCheck">Check Answers</button>
+          <div id="hhqResult"></div>
+        </div>
+        <div class="card">
+          <h3>Spanish Sprint</h3>
+          <p>Pick the best translation.</p>
+          <div id="ss"></div>
+          <button id="ssCheck">Check Answers</button>
+          <div id="ssResult"></div>
+        </div>
+      </div>
+      <button class="back">Back</button>
+    </section>
+
+    <footer>
+      <p class="small">&copy; 2025-08-11 Fin's AI Quest — Local only.</p>
+    </footer>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
