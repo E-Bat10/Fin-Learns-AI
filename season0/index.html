@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Season 0 — Fin’s AI Quest</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<header>
+  <h1>Season 0 — Setup, Safety, Coachability</h1>
+  <p class="tiny">14 lessons • 20–30 min each • Progress saves locally</p>
+  <nav class="main">
+    <a href="../index.html">Game</a>
+    <a href="index.html">Season 0</a>
+  </nav>
+</header>
+
+<section class="card">
+  <h3>Start here</h3>
+  <ol>
+    <li><a href="lesson01.html">Day 1 — Family AI Code + PIN</a> <span class="badge" id="b1">Status</span></li>
+    <li><a href="lesson02.html">Day 2 — Prompt Loop 101 + Worked Example</a> <span class="badge" id="b2">Status</span></li>
+    <li><a href="lesson03.html">Day 3 — Hallucination Hunter</a> <span class="badge" id="b3">Status</span></li>
+  </ol>
+  <p class="tiny">I’ll add Days 4–14 after you publish these. They’ll appear here automatically.</p>
+</section>
+
+<footer class="tiny">© <span id="yr"></span> Fin’s AI Quest</footer>
+
+<script src="../assets/course.js"></script>
+<script>
+  // Paint completion badges from localStorage
+  const p = finCourse.loadProg();
+  const map = {b1:"s0d1", b2:"s0d2", b3:"s0d3"};
+  Object.entries(map).forEach(([el,id])=>{
+    const b = document.getElementById(el);
+    if(p[id]?.completed){ b.textContent = "Completed"; b.classList.add("ok"); }
+    else { b.textContent = "Not started"; }
+  });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
