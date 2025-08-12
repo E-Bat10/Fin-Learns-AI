@@ -1,25 +1,31 @@
 :root { --max: 960px; }
-body { max-width: var(--max); margin: 24px auto; line-height: 1.6; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+body { max-width: var(--max); margin: 24px auto; line-height: 1.6; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#111; }
 header, footer { margin: 12px 0 18px; }
 nav.main { display:flex; gap:10px; flex-wrap:wrap; margin: 8px 0 16px; }
-nav.main a { text-decoration:none; padding:6px 10px; border:1px solid #bbb; border-radius:6px; }
+nav.main a { text-decoration:none; padding:6px 10px; border:1px solid #bbb; border-radius:8px; }
 .lesson-meta { font-size:.9rem; opacity:.8; margin-bottom:12px; }
-.card { border:1px solid #ddd; border-radius:10px; padding:14px; margin: 12px 0; background:#fff; }
+.card { border:1px solid #e5e5e5; border-radius:12px; padding:16px; margin: 14px 0; background:#fff; }
 .card h3 { margin-top:0; }
 .badge { display:inline-block; padding:2px 8px; border:1px solid #bbb; border-radius:999px; font-size:.8rem; }
 hr.soft { border:0; border-top:1px solid #eee; margin:18px 0; }
-.btn { padding:8px 12px; border:1px solid #999; background:#f5f5f5; border-radius:8px; cursor:pointer; }
+.btn { padding:8px 12px; border:1px solid #999; background:#f6f6f6; border-radius:8px; cursor:pointer; }
 .btn:hover { filter:brightness(0.96); }
 .btn.primary { border-color:#555; }
 .btn.success { border-color:#2d7; }
+.btn.danger { border-color:#c55; }
 .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#fafafa; padding:2px 6px; border-radius:6px; }
-.quiz { border:1px solid #ddd; border-radius:10px; padding:12px; margin:12px 0; }
+.quiz { border:1px solid #e5e5e5; border-radius:12px; padding:12px; margin:12px 0; }
 .quiz h4 { margin: 6px 0 10px; }
-.quiz .q { margin:10px 0; }
+.quiz .q { margin:10px 0; padding:8px; border-left:4px solid transparent; }
 .quiz .result { margin-top:10px; font-weight:600; }
 .copywrap { position:relative; }
 .copybtn { position:absolute; right:6px; top:6px; padding:4px 8px; font-size:.85rem; }
 textarea.prompt { width:100%; min-height:120px; padding:10px; border:1px solid #aaa; border-radius:8px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+textarea.notes { width:100%; min-height:120px; padding:10px; border:1px solid #bbb; border-radius:8px; }
 .tiny { font-size:.85rem; opacity:.75; }
 .ok { color:#1a7; font-weight:600; }
 .warn { color:#c55; font-weight:600; }
+.hidden { display:none; }
+.banner { padding:10px 12px; border:1px dashed #bbb; border-radius:10px; background:#fcfcfc; margin:8px 0 14px; }
+.kidcallout { background:#f9f6ff; border:1px solid #e5dbff; padding:10px 12px; border-radius:10px; }
+.coach { font-style: italic; color:#333; }
